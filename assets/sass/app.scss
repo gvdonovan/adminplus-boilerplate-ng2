@@ -1,0 +1,130 @@
+// VARIABLES
+@import './variables';
+
+// BOOTSTRAP
+@import 'adminplus/sass/style';
+
+// BOOTSTRAP LAYOUT
+@import 'bootstrap-layout/src/sass/style';
+
+// BOOTSTRAP LAYOUT SCROLLABLE
+@import 'bootstrap-layout-scrollable/src/sass/style';
+
+
+//bootstrap-layout v1.0.0-alpha.5 bootstrap-layout/src/sass/navbar-components/_dropdown.scss begin
+.dropdown-menu {
+  .nav-item & {
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+  }
+  &.dropdown-menu-list {
+    padding: 0;
+    font-size: .95rem;
+    .dropdown-item {
+      padding: .625rem 1.25rem;
+      border-bottom: 1px solid $dropdown-divider-bg;
+      &:last-of-type {
+        border-bottom-color: transparent;
+      }
+      i {
+        margin-left: -4px;
+      }
+      &.active i {
+        color: #fff;
+      }
+    }
+  }
+}
+//bootstrap-layout v1.0.0-alpha.5 bootstrap-layout/src/sass/navbar-components/_dropdown.scss end
+
+//bootstrap-layout v1.0.0-alpha.5 bootstrap-layout/src/sass/navbar-components/_forms.scss begin
+.navbar .form-inline {
+  line-height: $navbar-height;
+  margin-right: $grid-gutter-width;
+  margin-top: -1px;
+  .input-group {
+    line-height: 0;
+    border-right-color: transparent;
+    position: relative;
+    .form-control {
+      z-index: 1040;
+      padding-right: 50px;
+      border-radius: 5px;
+      border-color: transparent;
+    }
+    .input-group-btn {
+      position: absolute;
+      right: 0;
+      z-index: 1041;
+      .btn {
+        background: transparent;
+        &:hover,
+        &:active,
+        &:focus {
+          outline: none;
+        }
+        padding-right: 8px;
+      }
+    }
+  }
+}
+//bootstrap-layout v1.0.0-alpha.5 bootstrap-layout/src/sass/navbar-components/_forms.scss end
+
+//AdminPlus (Premium) v1.9 src/sass/common/style/navbar-components/_notifications.scss begin
+.navbar .dropdown-menu {
+  margin:0;
+}
+.dropdown-menu.notifications {
+  min-width: 280px;
+  padding:0;
+  > .dropdown-title {
+    padding: $grid-gutter-width/2;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .9rem;
+    line-height: normal;
+    color: rgba(0,0,0,.54);
+    border-bottom: 1px solid $border-color;
+  }
+  .dropdown-action {
+    line-height: 1rem;
+    padding: $grid-gutter-width/2;
+  }
+  > .dropdown-item {
+    padding: $grid-gutter-width/2;
+    line-height: 1.3;
+    font-size: .9rem;
+    border-bottom: 1px solid $border-color;
+    .media-left {
+      padding-right: $grid-gutter-width/2;
+    }
+    a.nav-link {
+      position:relative;
+      display: block;
+      strong {
+        display: block;
+        color: $gray;
+      }
+      color: $text-muted;
+      i {
+        opacity: .5;
+      }
+    }
+    &:hover {
+      border-color: $gray-lighter;
+      background: rgba(0,0,0, .05);
+      a.nav-link i {
+        opacity: 1;
+        color: $brand-primary;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    min-width: 220px;
+    .dropdown-item small {
+      display: block;
+    }
+  }
+}
+//AdminPlus (Premium) v1.9 src/sass/common/style/navbar-components/_notifications.scss end
